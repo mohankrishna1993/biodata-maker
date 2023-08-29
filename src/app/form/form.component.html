@@ -1,0 +1,230 @@
+
+
+<form [formGroup]="biodataForm" (ngSubmit)="onSubmit()">
+         <div class="biodata-container">
+          <div class="main">
+             <label class="input-label" for="name">Name</label>
+             <input
+              type="text"
+              id="name"
+              formControlName="name"
+              required
+              class="input-field">
+          </div>
+          
+          <div class="main-date">
+          <label class="input-datelabel" for="dateOfBirth">Date of Birth</label>
+         <div class="input-dateofbirth">
+          <input class="input-date" type="text" id="dateOfBirth" formControlName="dateOfBirth" [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+         </div>
+          </div>
+          <div class="main">
+            <label class="input-label" for="placeOfBirth">Place of Birth</label>
+            <input
+                id="placeOfBirth"
+                formControlName="placeOfBirth"
+                required
+                class="input-field"
+                type="text">
+          </div>
+          <!-- <div>
+            <label>Father Name</label>
+            <input type="text-box">
+          </div>
+          <div>
+            <label>Mother Name</label>
+            <input type="text-box">
+          </div> -->
+          <div class="main">
+            <label class="input-label" for="profession">Profession</label>
+            <select class="input-field" id="profession" formControlName="profession">
+              <option value>Employed in</option>
+              <option value="Private Sector">Private Sector</option>
+              <option value="Govt. / Public Sector">Govt. / Public Sector</option>
+              <option value="Civil Services">Civil Services</option>
+              <option value="Defence">Defence</option>
+              <option value="Business / Self Employed">Business / Self Employed</option>
+              <option value="Not Working">Not Working</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="main">
+            <label class="input-label">Education </label>
+            <select class="input-field" id="education" formControlName="education">
+              <option value>Select your education</option>
+              <option value="Post graduate">Post graduate</option>
+              <option value="Doctrate">Doctrate</option>
+              <option value="CA">CA</option>
+              <option value="Engineer">Engineer</option>
+              <option value="B. Tech/BE">B. Tech/BE</option>
+              <option value="M. Tech/ME">M. Tech/ME</option>
+              <option value="Doctor">Doctor</option>
+              <option value="MBBS">MBBS</option>
+              <option value="BAMS/BHMS">BAMS/BHMS</option>
+              <option value="MD">MD</option>
+              <option value="Lawyer / LLB / LLM">Lawyer / LLB / LLM</option>
+              <option value="Diploma / ITI">Diploma / ITI</option>
+              <option value="B-Pharmacy">B-Pharmacy</option>
+              <option value="M-Pharmacy">M-Pharmacy</option>
+              <option value="D-Pharmacy">D-Pharmacy</option>
+              <option value="BBA">BBA</option>
+              <option value="MBA">MBA</option>
+              <option value="Hotel Management">Hotel Management</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="main">
+            <label class="input-label">Rashi</label>
+            <select class="input-field" id="rashi" formControlName="rashi">
+              <option value>Select your Rashi</option>
+              <option value="Aries (Mesha)">Aries (Mesha)</option>
+              <option value="Taurus (Vrushabh)">Taurus (Vrushabh)</option>
+              <option value="Gemini (Mithum)">Gemini (Mithum)</option>
+              <option value="Cancer (Karkataka)">Cancer (Karkataka)</option>
+              <option value="Leo (Simha)">Leo (Simha)</option>
+              <option value="Virgo (Kanya)">Virgo (Kanya)</option>
+              <option value="Libra (Tula)">Libra (Tula)</option>
+              <option value="Scoripo (Vrushaka)">Scoripo (Vrushaka)</option>
+              <option value="Sagittarius (Dhanu)">Sagittarius (Dhanu)</option>
+              <option value="Capricorn (Makaram)">Capricorn (Makaram)</option>
+              <option value="Aquarius (Kumbha)">Aquarius (Kumbha)</option>
+              <option value="Pisces (Meena)">Pisces (Meena)</option>
+
+            </select>
+          </div>
+
+          <div class="main">
+            <label class="input-label">Star</label>
+            <select class="input-field" id="star" formControlName="star">
+              <option value>Select your Star</option>
+              <option value="Ashvini/Aswini">Ashvini/Aswini</option>
+              <option value="Bharani">Bharani</option>
+              <option value="Krithika">Krithika</option>
+              <option value="Rohini">Rohini</option>
+              <option value="Mrigashirsha">Mrigashirsha</option>
+              <option value="Ardra">Ardra</option>
+              <option value="Punarvasu">Punarvasu</option>
+              <option value="Pushya">Pushya</option>
+              <option value="Ashlesha">Ashlesha</option>
+              <option value="Magha">Magha</option>
+              <option value="Purva Phalguni">Purva Phalguni</option>
+              <option value="Uttara Phalguni">Uttara Phalguni</option>
+              <option value="Hasta">Hasta</option>
+              <option value="Chitra">Chitra</option>
+              <option value="Swathi">Swathi</option>
+              <option value="Vishaka">Vishaka</option>
+              <option value="Anuradha">Anuradha</option>
+              <option value="Jyeshtha">Jyeshtha</option>
+              <option value="Mula">Mula</option>
+              <option value="Purva Ashadha">Purva Ashadha</option>
+              <option value="Uttara Ashadha">Uttara Ashadha</option>
+              <option value="Shravana">Shravana</option>
+              <option value="Dhanishtha">Dhanishtha</option>
+              <option value="Shatabhisha">Shatabhisha</option>
+              <option value="Pruva Bhadrapada">Pruva Bhadrapada</option>
+              <option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+              <option value="Revati">Revati</option>
+            </select>
+          </div>
+          <div class="main">
+            <label class="input-label">Height</label>
+            <!-- <input type="text-box"> -->
+            <select class="input-field" id="height" formControlName="height">
+              <option value>Select your Height</option>
+              <option value="4 ft 05 in">4 ft 05 in</option>
+              <option value="4 ft 06 in">4 ft 06 in</option>
+              <option value="4 ft 07 in">4 ft 07 in</option>
+              <option value="4 ft 08 in">4 ft 08 in</option>
+              <option value="4 ft 09 in">4 ft 09 in</option>
+              <option value="4 ft 10 in">4 ft 10 in</option>
+              <option value="4 ft 11 in">4 ft 11 in</option>
+              <option value="5 ft 00 in">5 ft 00 in</option>
+              <option value="5 ft 01 in">5 ft 01 in</option>
+              <option value="5 ft 02 in">5 ft 02 in</option>
+              <option value="5 ft 03 in">5 ft 03 in</option>
+              <option value="5 ft 04 in">5 ft 04 in</option>
+              <option value="5 ft 05 in">5 ft 05 in</option>
+              <option value="5 ft 06 in">5 ft 06 in</option>
+              <option value="5 ft 07 in">5 ft 07 in</option>
+              <option value="5 ft 08 in">5 ft 08 in</option>
+              <option value="5 ft 09 in">5 ft 09 in</option>
+              <option value="5 ft 10 in">5 ft 10 in</option>
+              <option value="5 ft 11 in">5 ft 11 in</option>
+              <option value="6 ft 00 in">6 ft 00 in</option>
+              <option value="6 ft 01 in">6 ft 01 in</option>
+              <option value="6 ft 02 in">6 ft 02 in</option>
+              <option value="6 ft 03 in">6 ft 03 in</option>
+              <option value="6 ft 04 in">6 ft 04 in</option>
+              <option value="6 ft 05 in">6 ft 05 in</option>
+              <option value="6 ft 06 in">6 ft 06 in</option>
+              <option value="6 ft 07 in">6 ft 07 in</option>
+              <option value="6 ft 08 in">6 ft 08 in</option>
+              <option value="6 ft 09 in">6 ft 09 in</option>
+              <option value="6 ft 10 in">6 ft 10 in</option>
+              <option value="6 ft 11 in">6 ft 11 in</option>
+              <option value="7 ft 00 in">7 ft 00 in</option>
+            </select>
+          </div>
+          <div class="main">
+            <label class="input-label">Religion</label>
+            <select class="input-field" id="religion" formControlName="religion" >
+              <option value> Select your Religion</option>
+              <option value="Buddhist">Buddhist</option>
+              <option value="Christian">Christian</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Jewish">Jewish</option>
+              <option value="Jain">Jain</option>
+              <option value="Muslim">Muslim</option>
+              <option value="Parsi">Parsi</option>
+              <option value="Others">Others</option>
+              <option value="Others">Others</option>
+
+            </select>
+          </div>
+          <div class="main">
+            <label class="input-label">Gotram</label>
+            <input class="input-field" type="text-box" id="gotram" formControlName="gotram">
+          </div>
+          <div class="main">
+            <label class="input-label">Caste</label>
+            <input class="input-field" type="text-box" id="caste" formControlName="caste">
+          </div>
+          <div class="main">
+            <label class="input-label">Sub-caste</label>
+            <input class="input-field" type="text-box" id="subCaste" formControlName="subCaste">
+          </div>
+          <div class="main">
+            <label class="input-label">Siblings</label>
+            <input class="input-field" type="text-box" id="siblings" formControlName="siblings">
+          </div>
+          <div class="main">
+            <label class="input-label">Maternal Surname</label>
+            <input class="input-field" type="text-box" id="maternalSurname" formControlName="maternalSurname">
+          </div>
+          <div class="main">
+            <label class="input-label">Relatives Surnames</label>
+            <input class="input-field" type="text-box" id="relativesSurname" formControlName="relativesSurname">
+          </div>
+          <div class="main">
+            <label class="input-label">Father's Contact</label>
+            <input class="input-field" type="text-box" id="fathersContact" formControlName="fathersContact">
+          </div>
+          <div class="main">
+            <label class="input-label">Upload Photo
+              <input class="input-field" type="file" id="uploadPhoto" name="photo" formControlName="uploadPhoto" accept="image/*" (change)="onFileSelected($event)">
+            </label>
+          </div>
+
+          <div class="button-container">
+            <button class="submit-button" type="submit" >Submit</button>
+          </div>
+         </div>
+
+         </form>
+
+
+
+
+
