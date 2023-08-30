@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit{
 
   biodataForm!: FormGroup;
-  
+
 
   constructor(private biodataService: BiodataService,
               private router: Router) {}
@@ -57,7 +57,7 @@ export class FormComponent implements OnInit{
       siblings: new FormControl('',Validators.required),
       relativesSurname: new FormControl('',Validators.required),
       fathersContact: new FormControl('',Validators.required),
-      uploadPhotot: new FormControl('',Validators.required),
+      uploadPhoto: new FormControl('',Validators.required),
 
     });
   }

@@ -1,3 +1,6 @@
+.fullbody {
+  background-color: #76a477;
+}
 
 .biodata-container {
   position: relative;
@@ -7,9 +10,9 @@
   margin: 0 auto;
   margin-top: 28px;
   padding: 20px;
-  padding-top: 100px;
+  padding-top: 106px;
   padding-right: 100px;
-  padding-left: 59px;
+  padding-left: 79px;
   padding-bottom: 106px;
   background-image: url('../../assets/images/design.png');
   background-color: hsl(0, 11%, 85%);

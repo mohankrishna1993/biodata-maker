@@ -1,11 +1,12 @@
-
-<h2 style="text-align: center;">Preview</h2>
+<div class="fullbody">
+<h1 style="text-align: center;"><strong>Preview</strong></h1>
 
 <div class="biodata-container" id="previewContent">
 
       <div class="row-name">
 
         <div class="label-name"> {{ biodata.name }}</div>
+        <!-- <img *ngIf="selectedPhoto" [src]="selectedPhoto" alt="Uploaded Photo"> -->
       </div>
       <!-- <div class="row">
         <div class="label">Photo</div>
@@ -75,13 +76,14 @@
         <div class="label">Father's Contact </div>
         <div class="value">:   {{ biodata.fathersContact }}</div>
       </div>
+
 </div>
 
 <br>
 
 <button class="submit-button" (click)="download()">Download</button>
 
-
+</div>
 
 
 
