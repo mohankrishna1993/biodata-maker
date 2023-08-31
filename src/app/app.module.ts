@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
@@ -36,7 +37,8 @@ import { PreviewComponent } from './preview/preview.component';
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    RouterModule
+    RouterModule,
+    ImageCropperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

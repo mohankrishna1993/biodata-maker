@@ -8,6 +8,7 @@ import { ReplaySubject } from 'rxjs';
 export class BiodataService {
 
   private biodataSubject = new ReplaySubject<IData>();
+  public photo = new ReplaySubject<string | ArrayBuffer | null | undefined>();
 
   // private biodataSubject = new BehaviorSubject<IData | null>(null);
 

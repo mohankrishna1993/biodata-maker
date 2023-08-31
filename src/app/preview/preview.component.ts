@@ -13,6 +13,8 @@ import html2canvas from 'html2canvas';
 })
 export class PreviewComponent implements OnInit,OnDestroy{
 
+  selectedPhoto: string | ArrayBuffer | null | undefined;
+  url = "";
   private destroy$ = new Subject<void>();
   biodata: IData = {
     name: "",
@@ -31,7 +33,7 @@ export class PreviewComponent implements OnInit,OnDestroy{
     maternalSurname: "",
     relativesSurname: "",
     fathersContact: "",
-
+    uploadPhoto: ""
   };
 
   constructor(private biodataService: BiodataService) {}
@@ -44,6 +46,9 @@ export class PreviewComponent implements OnInit,OnDestroy{
       console.log(data);
       this.biodata = data;
     });
+    this.biodataService.photo.subscribe(d => {
+      this.selectedPhoto = d;
+    })
 
   }
 

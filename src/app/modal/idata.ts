@@ -15,5 +15,5 @@ export interface IData {
   maternalSurname: string;
   relativesSurname: string;
   fathersContact: string;
-  
+  uploadPhoto: string | ArrayBuffer | null | undefined;
 }

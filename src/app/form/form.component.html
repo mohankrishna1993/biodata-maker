@@ -31,14 +31,7 @@
                 class="input-field"
                 type="text">
           </div>
-          <!-- <div>
-            <label>Father Name</label>
-            <input type="text-box">
-          </div>
-          <div>
-            <label>Mother Name</label>
-            <input type="text-box">
-          </div> -->
+
           <div class="main">
             <label class="input-label" for="profession">Profession</label>
             <select class="input-field" id="profession" formControlName="profession">
@@ -215,9 +208,28 @@
           </div>
           <div class="main">
             <label class="input-label">Upload Photo
-              <input class="input-field" type="file" id="uploadPhoto" name="photo" formControlName="uploadPhoto" accept="image/*" (change)="onFileSelected($event)">
+              <input  type="file" id="uploadPhoto" name="photo" formControlName="uploadPhoto" accept="image/*" (change)="onFileSelected($event)">
             </label>
           </div>
+          <!-- <div style="float:left">
+             <image-cropper
+             [imageChangedEvent]="imgChangeEvt"
+             [aspectRatio]="4/4"
+             [maintainAspectRatio]="true"
+             [resizeToWidth]="256"
+             format="png"
+             (imageCropped)="cropImg($event)"
+             (imageLoaded)="imgLoad()"
+             (cropperReady)="initCropper()"
+             (loadImageFailed)="imgFailed()"
+             >
+
+             </image-cropper>
+             <div style="float:left">
+              <h4>Image Preview</h4>
+              <img [src]="cropImgPreview" alt="">
+             </div>
+          </div> -->
 
           <div class="button-container">
             <button class="submit-button" type="submit" >Submit</button>
@@ -226,6 +238,9 @@
 
          </form>
         </div>
+
+    <img  [src]="selectedPhoto" alt="Uploaded Photo" width="100">
+
 
 
 

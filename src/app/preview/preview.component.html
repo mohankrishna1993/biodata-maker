@@ -76,8 +76,18 @@
         <div class="label">Father's Contact </div>
         <div class="value">:   {{ biodata.fathersContact }}</div>
       </div>
+      <!-- Inside your Preview Component's HTML template -->
+<div class="row">
+  <div class="label">Photo</div>
+  <div class="value">
+    <img  [src]="selectedPhoto" alt="Uploaded Photo" width="100">
+  </div>
+</div>
 
 </div>
+
+
+
 
 <br>
 

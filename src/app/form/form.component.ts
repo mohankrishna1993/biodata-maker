@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IData } from '../modal/idata';
 import { BiodataService } from '../biodata.service';
 import { Router } from '@angular/router';
+import { ImageCroppedEvent } from 'ngx-image-cropper';
 
 
 
@@ -12,10 +13,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.css'],
 
 })
-export class FormComponent implements OnInit{
+export class FormComponent implements OnInit {
 
   biodataForm!: FormGroup;
+  selectedPhoto: string | ArrayBuffer | null | undefined = null; // Initialize it to null
 
+
+  // imgChangeEvt: any = ""
+  // cropImgPreview: any= ""
 
   constructor(private biodataService: BiodataService,
               private router: Router) {}
@@ -36,7 +41,9 @@ export class FormComponent implements OnInit{
     siblings: "",
     maternalSurname: "",
     relativesSurname: "",
-    fathersContact: ""
+    fathersContact: "",
+    uploadPhoto: null,
+
   };
 
   ngOnInit() {
@@ -63,22 +70,34 @@ export class FormComponent implements OnInit{
   }
 
   onSubmit() {
-    console.log(this.biodataForm.value)
+    console.log(this.biodataForm.value);
 
     this.biodataService.setData(this.biodataForm.value);
 
     this.router.navigate(['/preview']);
 
   }
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-
+ onFileSelected(event: any): void {
+    const file = event.target.files[0];
     if (file) {
-
-      console.log(file);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.selectedPhoto = e.target?.result;
+        console.log(this.selectedPhoto);
+        this.biodataService.photo.next(this.selectedPhoto);
+        this.biodataForm.patchValue({
+          uploadPhoto: this.selectedPhoto
+        });
+      };
+      reader.readAsDataURL(file);
+    } else {
+      this.selectedPhoto = null; // Set it to null when no file is selected
     }
+    // Also, update the selectedPhoto property in the biodata object
+    console.log(this.selectedPhoto);
+    this.data.uploadPhoto = this.selectedPhoto;
+
   }
 
-
-
 }
+
