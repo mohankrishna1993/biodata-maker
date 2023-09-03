@@ -1,89 +1,81 @@
 <div class="fullbody">
 <h1 style="text-align: center;"><strong>Preview</strong></h1>
-
 <div class="biodata-container" id="previewContent">
-
       <div class="row-name">
-
         <div class="label-name"> {{ biodata.name }}</div>
-        <!-- <img *ngIf="selectedPhoto" [src]="selectedPhoto" alt="Uploaded Photo"> -->
       </div>
-      <!-- <div class="row">
-        <div class="label">Photo</div>
-        <div class="value">
-          <img *ngIf="selectedPhoto" [src]="selectedPhoto" alt="Uploaded Photo" width="100">
-        </div>
-      </div> -->
+      <div class="row details-container">
+      <div style="flex: 1 0 auto">
       <div class="row">
-        <div class="label">Date of Birth </div>
-        <div class="value">: {{ biodata.dateOfBirth | date}}</div>
+        <div class="label">Date of Birth : </div>
+        <div class="value">{{ biodata.dateOfBirth | date}}</div>
       </div>
       <div class="row">
-        <div class="label">Place of Birth </div>
-        <div class="value">: {{ biodata.placeOfBirth }}</div>
+        <div class="label">Place of Birth : </div>
+        <div class="value"> {{ biodata.placeOfBirth }}</div>
       </div>
       <div class="row">
-        <div class="label">Profession </div>
-        <div class="value">: {{ biodata.profession }}</div>
+        <div class="label">Profession : </div>
+        <div class="value"> {{ biodata.profession }}</div>
       </div>
       <div class="row">
-        <div class="label">Education </div>
-        <div class="value">: {{ biodata.education }}</div>
+        <div class="label">Education : </div>
+        <div class="value"> {{ biodata.education }}</div>
       </div>
-      <div class="row">
-        <div class="label">Rashi </div>
-        <div class="value">: {{ biodata.rashi }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Star </div>
-        <div class="value">: {{ biodata.star }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Height </div>
-        <div class="value">: {{ biodata.height }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Religion </div>
-        <div class="value">: {{ biodata.religion }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Gotram </div>
-        <div class="value">: {{ biodata.gotram }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Caste </div>
-        <div class="value">: {{ biodata.caste }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Sub-caste </div>
-        <div class="value">: {{ biodata.subCaste }}</div>
-      </div>
-
-      <div class="row">
-        <div class="label">Siblings </div>
-        <div class="value">: {{ biodata.siblings }}</div>
-      </div>
-
-      <div class="row">
-        <div class="label">Maternal Surname </div>
-        <div class="value">:   {{ biodata.maternalSurname }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Relatives Surnames </div>
-        <div class="value">:   {{ biodata.relativesSurname }}</div>
-      </div>
-      <div class="row">
-        <div class="label">Father's Contact </div>
-        <div class="value">:   {{ biodata.fathersContact }}</div>
-      </div>
-      <!-- Inside your Preview Component's HTML template -->
-<div class="row">
-  <div class="label">Photo</div>
-  <div class="value">
+    </div>
+    <div>
     <img  [src]="selectedPhoto" alt="Uploaded Photo" width="100">
-  </div>
-</div>
 
+    </div>
+    </div>
+
+
+      <div class="row">
+        <div class="label">Rashi : </div>
+        <div class="value"> {{ biodata.rashi }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Star : </div>
+        <div class="value"> {{ biodata.star }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Height : </div>
+        <div class="value"> {{ biodata.height }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Religion : </div>
+        <div class="value"> {{ biodata.religion }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Gotram : </div>
+        <div class="value"> {{ biodata.gotram }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Caste :</div>
+        <div class="value"> {{ biodata.caste }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Sub-caste : </div>
+        <div class="value"> {{ biodata.subCaste }}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Siblings : </div>
+        <div class="value"> {{ biodata.siblings }}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Maternal Surname : </div>
+        <div class="value">   {{ biodata.maternalSurname }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Relatives Surnames : </div>
+        <div class="value">   {{ biodata.relativesSurname }}</div>
+      </div>
+      <div class="row">
+        <div class="label">Father's Contact :  </div>
+        <div class="value">   {{ biodata.fathersContact }}</div>
+      </div>
 </div>
 
 
